@@ -9,6 +9,10 @@
 
 </head>
 <body>
+    <h1>Simulador 8 reinas</h1>
+    <p>Coloca las 8 reinas en el tablero sin que se ataquen</p>
+    <input type="button" value="Reiniciar" onclick="resetBoard()">
+
     <table id="Tablero">
         <tr>
             <td onclick="cellClick(this)" onmouseover="cambiarColor(0, 0)" onmouseleave="clearColor()"></td>
@@ -91,5 +95,6 @@
             <td onclick="cellClick(this)" onmouseover="cambiarColor(7, 7)" onmouseleave="clearColor()"></td>
         </tr>
     </table>
+    <h1 id="message">   </h1>
 </body>
 </html>

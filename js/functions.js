@@ -8,12 +8,15 @@ function cellClick (cell)
 
         if (counter < 8) 
             {
+                counter++;
                 cell.style = `background-image: url(img/queen.png); 
                 background-size: cover;`;
                 blockCells(cell);
-                counter++;
-            }else{
-                alert("Las 8 reinas ya han sido colocadas");
+
+                if (counter == 8) {
+                    document.getElementById("message").innerText = "¡Felicidades! Has colocado las 8 reinas.";
+                }
+
             }
     }else{
         cell.style = "background-image: none;";
@@ -104,4 +107,9 @@ function unblockCells (cell) {
             };
         }
     }
+}
+
+function resetBoard ()
+{
+    location.reload();
 }
